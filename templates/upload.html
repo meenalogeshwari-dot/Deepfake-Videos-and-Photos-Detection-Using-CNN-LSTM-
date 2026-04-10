@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
+
+        .upload-card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            font-weight: bold;
+            color: #00ffff;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            background-color: #1c1c1c;
+            color: white;
+            border: 1px solid #00ffff;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background-color: #00ffff;
+            border: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #00cccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="upload-card">
+        <h2>🔍 Deepfake Detection</h2>
+
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" class="form-control" required>
+            <br>
+            <button type="submit" class="btn btn-primary">Upload & Detect</button>
+        </form>
+
+    </div>
+
+</body>
+</html>	
